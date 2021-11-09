@@ -1,0 +1,13 @@
+<h1>Editing Article</h1>
+
+<%= form_for(@article) do |a| %>
+  <%= a.label :title %>
+  <%= a.text_field :title %>
+  <%= a.label :content %>
+  <%= a.text_field :content %>
+  <%= a.submit %>
+<% end %>
+
+<%= link_to articles_path do %>
+  <i class="fas fa-backward"> Back to all articles</i>
+<% end %>

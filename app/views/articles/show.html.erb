@@ -1,0 +1,11 @@
+<%= link_to edit_article_path do %> <i class="fas fa-edit"></i> <% end %> | <%= link_to article_path(@article), method: :delete,
+            data: { confirm: "Are you sure you want to delete the task: #{@article.title}?" } do %>
+            <i class="fas fa-trash-alt"></i>
+            <% end %>
+
+<h1><%= @article.title %> </h1>
+<p><%= @article.content %></p>
+
+<%= link_to articles_path do %>
+  <i class="fas fa-backward"> Back to all articles</i>
+<% end %>
